@@ -34,7 +34,7 @@ function addFunction(){
     console.log(addCheck);
     }
 
-equals.addEventListener('click', totalGet)
+equals.addEventListener('click', totalGet);
 function totalGet() {
     if(addCheck === true){
         calc.add(valueNum);
@@ -44,4 +44,12 @@ function totalGet() {
     valueNum = 0;
     console.log(calc.getTotal());
     console.log(addCheck);
+}
+
+clear.addEventListener('click', clearDisplay);
+function clearDisplay() {
+    calc.load(0);
+    numValue = 0;
+    display.innerHTML = '0.00';
+    console.log(numValue);
 }
