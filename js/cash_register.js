@@ -23,23 +23,25 @@ addButton.addEventListener('click', addFunction);
 function addFunction(){
     valueStr = "";
     display.innerHTML = '+';
-    calc.add(displayNum);
+    calc.add(valueNum);
     valueNum = calc.getTotal();
     calc.load(valueNum);
     console.log(valueNum);
+    displayNum = 0;
     if(addCheck === false){
         addCheck = true;
-    }else{
-        addCheck = false;
     }
+    console.log(addCheck);
     }
 
 equals.addEventListener('click', totalGet)
 function totalGet() {
     if(addCheck === true){
-        calc.add(displayNum);
+        calc.add(valueNum);
         addCheck = false;
     }
     display.innerHTML = calc.getTotal();
+    valueNum = 0;
     console.log(calc.getTotal());
+    console.log(addCheck);
 }
