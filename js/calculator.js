@@ -38,7 +38,7 @@ function calculatorModule() {
      * @param { Number } x
      */
     function add(num) {
-        validate(num);
+        validate(num); 
         _total += num;
     }
 
