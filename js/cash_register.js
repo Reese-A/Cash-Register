@@ -4,10 +4,6 @@ let valueStr = "";
 let valueNum = 0;
 let lastOperator = '';
 let ranLoad = false;
-// let addCheck = false;
-// let subCheck = false;
-// let multiCheck = false;
-
 
 let numButtons = document.getElementsByClassName('numButton');
 for (i = 0; i < numButtons.length; i++) {
@@ -33,10 +29,6 @@ function addFunction() {
   calc.add(valueNum);
   // valueNum = calc.getTotal();
   console.log(valueNum);
-  // if (addCheck === false) {
-  //   addCheck = true;
-  // }
-  // console.log('add: ' + addCheck);
 }
 
 subButton.addEventListener('click', subFunction);
@@ -51,11 +43,6 @@ function subFunction() {
   calc.subtract(valueNum);
   // valueNum = calc.getTotal();
   console.log(valueNum);
-  // if (subCheck === false) {
-  //   subCheck = true;
-  //   calc.subtract(valueNum);
-  // }
-  // console.log('sub: ' + subCheck);
 }
 
 multiButton.addEventListener('click', multiFunction);
@@ -64,7 +51,6 @@ function multiFunction() {
   display.innerHTML = 'x';
   calc.multiply(valueNum);
   valueNum = calc.getTotal();
-  // calc.load(valueNum);
   console.log(valueNum);
   if (multiCheck === false) {
     multiCheck = true;
@@ -74,24 +60,9 @@ function multiFunction() {
 
 equals.addEventListener('click', totalGet);
 function totalGet() {
-  // if (addCheck === true) {
-  //   calc.add(valueNum);
-  //   addCheck = false;
-  // }
-  // if (subCheck === true) {
-  //   calc.subtract(valueNum);
-  //   subCheck = false;
-  // }
-  // if (multiCheck === true) {
-  //   calc.multiply(valueNum);
-  //   multiCheck = false;
-  // }
   display.innerHTML = calc.getTotal();
   valueNum = 0;
   console.log(calc.getTotal());
-  // console.log('add: ' + addCheck);
-  // console.log('sub: ' + subCheck);
-  // console.log('multi: ' + multiCheck);
 }
 
 clear.addEventListener('click', clearDisplay);
